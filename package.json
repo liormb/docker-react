@@ -11,7 +11,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker:dev:build": "docker build -f Dockerfile.dev .",
+    "docker:dev:run": "docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <IMAGE_HASH>"
   },
   "eslintConfig": {
     "extends": "react-app"
